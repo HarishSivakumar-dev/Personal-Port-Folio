@@ -4,6 +4,12 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
+*,
+*::before,
+*::after 
+{
+    box-sizing: border-box;
+}
 body
 {
         font-family: "Poppins", sans-serif;
@@ -16,17 +22,19 @@ body
     background-color: black;
     color: whitesmoke;
     height:610px;
-    width: 330px;
+    min-width: 300px;
     display: inline-block;
     text-align: center;
     overflow-y: scroll;
-    float: left;
     position: relative;
     overflow-x: hidden;
+    flex-shrink: 0;
 }
 .left-split h2
 {
     margin-top: 150px;
+    position: relative;
+    top: 30px;
 }
 ul
 {
@@ -40,14 +48,15 @@ h3
 .rigth-split
 {
     
-    background-color:  grey;
+    background-color: whitesmoke;
     height: 610px;
-    width: 1000px;
+    width: 100%;
     display:inline-block;
-    float: right;
     position: relative;
     overflow: scroll;
-    overflow-x: hidden;
+    overflow-y: scroll;
+    flex-grow: 1;
+    overflow-x: scroll;
     scroll-behavior: smooth;
 }
 
@@ -55,7 +64,7 @@ h3
 {
     padding: 107px;
     margin-top: -90px;
-    margin-left: -10px;
+    margin-left: 10px;
     display: inline-block;
     list-style-type: none;
     color: grey;
@@ -70,31 +79,37 @@ li
     margin-left: 25px;
     list-style-type: none;
     color:grey;
+    
 }
 #ic1
 {
     margin-top: 53px;
     margin-right: 100px;
+    min-width: 20px;
 }
 #ic2
 {
     margin-top: 53px;
     margin-right: 100px;
+    min-width: 20px;
 }
 #ic3
 {
     margin-top: 53px;
     margin-right: 100px;
+    min-width: 20px;
 }
 #ic4
 {
     margin-top: 53px;
     margin-right: 100px;
+    min-width: 20px;
 }
 #ic5
 {
     margin-top: 53px;
     margin-right: 100px;
+    min-width: 20px;
 }
 #mis
 {
@@ -121,6 +136,7 @@ li
     cursor: pointer;
     display: inline-block;
     position: relative;
+    top: 40px;
     z-index: 1;
 }
 .fa-brands.fa-linkedin
@@ -144,6 +160,7 @@ li
     cursor: pointer;
     display: inline-block;
     position: relative;
+    top: 40px;
     z-index: 1;
 }
 .fa-brands.fa-instagram
@@ -168,6 +185,7 @@ li
     margin-right: 10px;
     display: inline-block;
     position: relative;
+    top: 40px;
     z-index: 1;
 }
 .fa-brands.fa-skype
@@ -193,11 +211,13 @@ li
 
 .onbj
 {
-    height: 125px;
-    width: 125px;
+    height: 150px;
+    width: 150px;
     border:10px solid grey;
     border-radius: 100%;
     margin-top: 45px;
+    position: relative;
+    top: 30px;
     margin-bottom: -130px;
 }
 .topicon
@@ -207,6 +227,7 @@ li
 .overall
 {
     display: flex;
+    width: 100%;
 }
 body
 {
@@ -217,10 +238,10 @@ body
     margin-left: 30px;
     white-space:nowrap;
     height: 110px;
-    width: 1000px;
+    width: 70%;
     display: inline-block;
     position: relative;
-    z-index: 3;
+    z-index: 1;
     top:-50%;
 }
 .home h2
@@ -234,7 +255,7 @@ body
 }
 .home span::before
 {
-    content:" Developer";
+    content:"";
     width: fit-content;
     display: inline-block;
     color: #ff7f50;
@@ -308,7 +329,646 @@ body
 .about
 {
     height: 610px;
-    width:1000px;
+    width:100%;
+    top:-60px;
     position: relative;
-    top:-16%;
+}
+.short
+{
+    display: none;
+    position: relative;
+    bottom: 700px;
+    left: 850px;
+    background-color: skyblue;
+    border-radius: 100%;
+    text-align: center;
+    padding: 13px;
+}
+.short1
+{
+    display: none;
+    position: relative;
+    bottom: 700px;
+    left: 850px;
+    background-color: skyblue;
+    border-radius: 100%;
+    text-align: center;
+    padding: 13px;
+}
+@media screen and (max-width: 767px)
+{
+    .overall
+    {
+        display: flex;
+        position: relative;
+        z-index: 2;
+    }
+    .left-split
+    {
+       min-width: 200px;
+       font-size: 15px;
+       display: none;
+       z-index: -5;
+       float: left;
+    }
+    #icons
+    {
+        margin-left: -60px;
+    }
+    .rigth-split
+    {
+        min-width: 500px;
+        font-size: 15px;
+        position: relative;
+        z-index: -2;
+    }
+    #scr1
+    {
+        height: 305px;
+        z-index:0;
+        width: 100%;
+    }
+    .home h1,h2,span::before
+    {
+        font-size: 15px;
+        z-index: -3;
+        font-weight: 500;
+    }
+    .short
+    {
+        display: inline-block;
+        position: sticky;
+        width: fit-content;
+        float: right;
+        z-index: 3;
+        left: 420px;
+        bottom: 530px;
+    }
+    .short1
+    {
+        display: inline-block;
+        position: sticky;
+        width: fit-content;
+        float: right;
+        z-index:-1;
+        left: 450px;
+        bottom: 530px;
+    }
+    .list1
+    {
+        display: block;
+    }
+    .list2
+    {
+        display: block;
+    }
+    .overall .child1
+    {
+        display: block !important;
+        background-color: #ff7f50 !important;
+        float: none;
+    }
+    .child2
+    {
+        display: block;
+    }
+    .inner1
+    {
+        display: block !important;
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 1008px)
+{
+    .left-split
+    {
+        display: inline-block;
+        visibility:visible;
+    }
+    #scr1
+    {
+        height: 305px;
+        z-index:0;
+        width: 100%;
+    }
+    .home
+    {
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .left-split.visible
+    {
+        display: none;
+        visibility: hidden;
+    }
+}
+.left-split.visible
+{
+    display: inline-block;
+    visibility: visible;
+    position: absolute;
+    z-index: 2;
+}
+#ul1
+{
+    font-weight: 500;
+}
+#ul
+{
+    background-color: skyblue;
+    width: 60px;
+    border-top-right-radius: 100%;
+    margin-top: 10px;
+    height: 5px;
+    display: block;
+    z-index: 4; 
+}
+.details
+{
+    margin-top: 10px;
+    width: fit-content;
+}
+.child1
+{
+    height: 300px;
+    width: 400px;
+    background-color: black;
+    display: inline-block;
+}
+.child2
+{
+    display: inline-block;
+    margin-left: 20px;
+    width: 100%;
+}
+#crossinn1
+{
+    margin-top: 25px;
+}
+h4
+{
+    display: inline-block;
+}
+#db
+{
+    display: inline-block;
+    margin-left: 15px;
+}
+.gotta
+{
+    margin-top: 20px;
+}
+.list1
+{
+    display: inline-block;
+    margin-left: 20px;
+}
+.list2
+{
+    display: inline-block;
+    position: relative;
+    margin-left: 20px;
+}
+.inner1
+{
+    display: flex;
+    margin-top: 30px;
+}
+#ul2
+{
+    position: relative;
+    font-weight: 500;
+}
+#ul22
+{
+    background-color: skyblue;
+    width: 60px;
+    border-top-right-radius: 100%;
+    margin-top: 10px;
+    height: 5px;
+    display: block;
+    z-index: 4;
+    position: relative;
+}
+.resume
+{
+    height: 1000px;
+    width: 100%;
+}
+#intro
+{
+    position: relative;
+    top: 30px;
+}
+.res
+{
+    position: relative;
+    top: 50px;
+    width: 96%;
+    height: 400px;
+    left: 30px;
+}
+.sum
+{
+    float: left;
+    display: flex;
+    width: 48%;
+    height: 400px;
+}
+.edu
+{
+    float: right;
+    display: flex;
+    width: 50%;
+    position: relative;
+    bottom: 70px;
+    height: 400px;
+}
+#point1
+{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    position: relative;
+    right: 3.6px;
+    border: 3px skyblue solid;
+}
+#line1
+{
+    width: 3px;
+    height: 320px;
+    background-color: skyblue;
+    display: inline-block;
+}
+#su
+{
+    display: inline-block;
+    position: relative;
+    left: 10px;
+}
+#set1
+{
+    display: inline-block;
+    width: 5px;
+}
+#com
+{
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    color: gray;
+}
+#single
+{
+    position:relative;
+    top: 20px;
+}
+#lis1
+{
+    position: relative;
+    left: 20px;
+    top:20px;
+}
+#on2
+{
+    margin-top: 20px;
+}
+#kal
+{
+    position: relative;
+    bottom: 70px;
+    left: 18px;
+}
+#aca1
+{
+    position: relative;
+    top: 20px
+}
+#aca2
+{
+    position: relative;
+    top: 40px;
+}
+#single1
+{
+    position:relative;
+    top: 60px;
+}
+.coleg
+{
+    position: relative;
+    top:130px;
+}
+.done
+{
+    display:block;
+    height: 100px;
+    width: 100%;
+    position: relative;
+    bottom: 60px;
+}
+.skills
+{
+    width: 100%;
+    height: 700px;
+}
+.bargraph-sec
+{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    top: 50px;
+    background-color:ghostwhite;
+}
+.bargraph-sec-1
+{
+    width: 50%;
+    height: 500px;
+    float: left;
+}
+.bargraph-sec-2
+{
+    width: 50%;
+    height: 500px;
+    float: right;
+}
+.html
+{
+    width: 90%;
+    height: 40px;
+    background-color:gainsboro;
+    margin-bottom: 50px;
+}
+#per1
+{
+    width: 95%;
+    height: 40px;
+    position: relative;
+    background-color: greenyellow;
+}
+#per1:after
+{
+    position: absolute;
+    right: 1.5%;
+    content: "95%";
+    font-weight: 700;
+    top: 10px;
+}
+#per2
+{
+    width: 90%;
+    height: 40px;
+    position: relative;
+    background-color: greenyellow;
+}
+#per2:after
+{
+    position: absolute;
+    right: 1.5%;
+    content: "90%";
+    font-weight: 700;
+    top: 10px;
+}
+#per3
+{
+    width: 85%;
+    height: 40px;
+    position: relative;
+    background-color: greenyellow;
+}
+#per3:after
+{
+    position: absolute;
+    right: 1.5%;
+    content: "85%";
+    font-weight: 700;
+    top: 10px;
+}
+#per4
+{
+    width: 70%;
+    height: 40px;
+    position: relative;
+    background-color: greenyellow;
+}
+#per4:after
+{
+    position: absolute;
+    right: 1.5%;
+    content: "70%";
+    font-weight: 700;
+    top: 10px;
+}
+#per5
+{
+    width: 90%;
+    height: 40px;
+    position: relative;
+    background-color: greenyellow;
+}
+#per5:after
+{
+    position: absolute;
+    right: 1.5%;
+    content: "90%";
+    font-weight: 700;
+    top: 10px;
+}
+#per6
+{
+    width: 85%;
+    height: 40px;
+    position: relative;
+    background-color: greenyellow;
+}
+#per6:after
+{
+    position: absolute;
+    right: 1.5%;
+    content: "85%";
+    font-weight: 700;
+    top: 10px;
+}
+#per7
+{
+    width: 97%;
+    height: 40px;
+    position: relative;
+    background-color: greenyellow;
+}
+#per7:after
+{
+    position: absolute;
+    right: 1.5%;
+    content: "97%";
+    font-weight: 700;
+    top: 10px;
+}
+#per8
+{
+    width: 74%;
+    height: 40px;
+    position: relative;
+    background-color: greenyellow;
+}
+#per8:after
+{
+    position: absolute;
+    right: 1.5%;
+    content: "74%";
+    font-weight: 700;
+    top: 10px;
+}
+.contact
+{
+    width: 100%;
+    height: 800px;
+    background-color:gainsboro;
+    z-index: 4;
+}
+.con-det
+{
+    height: 600px;
+    width:48%;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    top: 40px;
+}
+#part1
+{
+    margin-bottom: 40px;
+}
+#gotto
+{
+    position: relative;
+    font-size: 20px;
+    bottom: 7px;
+    margin-left: 5px;
+}
+#part2
+{
+    font-size: 30px;
+}
+.form
+{
+    height: 600px;
+    width:48%;
+    display: inline-block;
+    position: relative;
+    top: 75px;
+    left:50px;
+}
+.alignbox
+{
+    width: 100%;
+    height: 600px;
+    display: flex;
+}
+#na
+{
+    height: 30px;
+    width: 200px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#na11
+{
+    height: 30px;
+    width: 200px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#na12
+{
+    height: 30px;
+    width: 200px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#na13
+{
+    height: 30px;
+    width: 200px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#na1
+{
+    height: 150px;
+    width: 300px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-color: 10px black solid;
+    border-left-color: 10px black solid;
+}
+#gotcha
+{
+    position: relative;
+    bottom: 50px;
+    z-index: 2;
+}
+#gotchaa
+{
+    position: relative;
+    bottom: 100px;
+    z-index: 0;
+}
+#table1
+{
+    height: 500px;
+}
+#submit
+{
+    width: 150px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    height: 50px;
+    position: relative;
+    bottom: 140px;
+    background-color: #1E90FF;
+    color:beige;
+    font-size: 17px;
+    font-weight: 500;
+    left: 19%;
+}
+#submit:hover
+{
+    cursor: pointer;
+    background-color: #00BFFF;
+}
+.footer
+{
+    background-color: black;
+    width: 100%;
+    height: 130px;
+    position: relative;
+    bottom: 15px;
+    color: white;
+    text-align: center;
+}
+.footer p
+{
+    position: relative;
+    top:35%;
+}
+#last
+{
+    font-size: 13;
+}
+.top
+{
+    border-radius: 100%;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    position: fixed;
+    left: 95%;
+    text-align: center;
+    background-color: skyblue;
+    bottom:20px;
 }
