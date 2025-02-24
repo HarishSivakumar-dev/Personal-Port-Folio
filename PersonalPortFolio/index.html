@@ -13,8 +13,8 @@
     <script src="https://kit.fontawesome.com/706cf92b46.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="overall">
-    <div class="left-split">
+<div class="overall" id="over">
+    <div class="left-split" id="left">
         <img class="onbj" src="C:\Users\hai\Desktop\TNEA\candidate-photo.jpeg">
         <h2>Harish Sivakumar</h2>
         <ul class="topicon">
@@ -25,31 +25,202 @@
         <ul id="icons">
             <li onmouseover="colorchange(event)" onmouseout="colorrevoke()" onclick="scrll(event)" id="ic1"><i class="material-icons">home</i></li>
             <li onmouseover="colorchange(event)" onmouseout="colorrevoke()" onclick="scrll(event)" id="ic2"><i class="material-icons">person</i></li>
-            <li onmouseover="colorchange(event)" onmouseout="colorrevoke()" id="ic3"><i class="material-icons">attachment</i></li>
-            <li onmouseover="colorchange(event)" onmouseout="colorrevoke()" id="ic4"><i class="material-icons">computer</i></li>     
-            <li onmouseover="colorchange(event)" onmouseout="colorrevoke()" id="ic5"><i class="material-icons">phone</i></li>                   
+            <li onmouseover="colorchange(event)" onmouseout="colorrevoke()" onclick="scrll(event)" id="ic3"><i class="material-icons">attachment</i></li>
+            <li onmouseover="colorchange(event)" onmouseout="colorrevoke()" onclick="scrll(event)" id="ic4"><i class="material-icons">computer</i></li>     
+            <li onmouseover="colorchange(event)" onmouseout="colorrevoke()" onclick="scrll(event)" id="ic5"><i class="material-icons">phone</i></li>                   
         </ul>
         <ul id="topic">
                 <li onmouseover="colorchange(event)" onmouseout="colorrevoke()" onclick="scrll(event)" id="on"><h3>Home</h3></li>
                 <li onmouseover="colorchange(event)" onmouseout="colorrevoke()" onclick="scrll(event)" id="abt"><h3>About</h3></li>
-                <li onmouseover="colorchange(event)" onmouseout="colorrevoke()" id="mis"><h3>Resume</h3></li>
-                <li onmouseover="colorchange(event)" onmouseout="colorrevoke()" id="sim"><h3>Skills</h3></li>
-                <li onmouseover="colorchange(event)" onmouseout="colorrevoke()" id="me"><h3>Contact</h3></li>
+                <li onmouseover="colorchange(event)" onmouseout="colorrevoke()" onclick="scrll(event)" id="mis"><h3>Resume</h3></li>
+                <li onmouseover="colorchange(event)" onmouseout="colorrevoke()" onclick="scrll(event)" id="sim"><h3>Skills</h3></li>
+                <li onmouseover="colorchange(event)" onmouseout="colorrevoke()" onclick="scrll(event)" id="me"><h3>Contact</h3></li>
         </ul>
                 
     </div>
-    <div class="rigth-split">
-        <img id="scr1" src="C:\Users\hai\Desktop\project java\WhatsApp Image 2025-01-12 at 11.15.09 AM.jpeg" height="610px" width="1000px" class="back">
+    <div class="rigth-split" id="right" onscroll="sc(event)">
+        <img id="scr1" src="C:\Users\hai\Desktop\project java\WhatsApp Image 2025-01-12 at 11.15.09 AM.jpeg" height="610px" width="100%" class="back">
         <div class="home">
         <h1>Harish Sivakumar</h1>
         <h2>I'm a </h2><span></span>
         </div>
-        <div class="about" id="scr2">
-            <h1>Test Word !</h1>
+        <div  class="short" id="shr" onclick="show(event)" onmouseover="hov()">
+            <i class="material-icons">menu</i>
         </div>
-        <div class="resume" id="scr3"></div>
-        <div class="skills" id="scr4"></div>
-        <div class="contact" id="scr5"></div>
+        <div class="short1" id="shr1" onclick="hide(event)" onmouseover="hov()">
+            <i class="material-icons">close</i>
+        </div>
+        <div class="about" id="scr2">
+            <h1 id="ul1">About:</h1>
+            <p id="ul"></p>
+            <p class="details">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores, consequatur optio! Minus quod quasi fuga eius consequuntur laborum distinctio atque suscipit a, optio dolorum saepe quidem, necessitatibus eligendi, quo iure.</p>
+            <div class="inner1">
+                <div class="child1"></div>
+                <div class="child2">
+                    <h2>FullStack Developer & Backend Programmer.</h2>
+                    <p id="crossinn1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque excepturi ex explicabo, veritatis laborum in! Eligendi soluta tenetur incidunt a!</p>
+                    <ul class="list1">
+                        <li class="gotta"><h4>Birthday:</h4><p id="db">1 March 2007</p></li>
+                        <li class="gotta"><h4>Website:</h4><p id="db">www.demo.com</p></li>
+                        <li class="gotta"><h4>Phone:</h4><p id="db">+91-9092418002</p></li>
+                        <li class="gotta"><h4>City:</h4><p id="db">Salem, India</p></li>
+                    </ul>
+                    <ul class="list2">
+                        <li class="gotta"><h4>Age:</h4><p id="db">18</p></li>
+                        <li class="gotta"><h4>Degree:</h4><p id="db">B.E, ECE</p></li>
+                        <li class="gotta"><h4>Email:</h4><p id="db">harishss.2k07@gmail.com</p></li>
+                        <li class="gotta"><h4>Freelance:</h4><p id="db">Available</p></li>
+                    </ul>
+                    <p id="crossinn1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, ipsum minus? Quidem rerum magni exercitationem excepturi, nulla minima error quaerat, corporis adipisci eligendi porro molestias neque, recusandae dicta nobis aut.</p>
+                </div>
+            </div>
+        </div>
+        <div class="resume" id="scr3">
+            <h1 id="ul2">Resume:</h1>
+            <p id="ul22"></p>
+            <p class="details">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis aliquam distinctio, repellat est placeat sequi soluta ipsum provident sint aliquid.</p>
+            <div class="res">
+                <h3>Summary</h3>
+                <div class="sum">
+                        <div id="set1">
+                            <div id="point1"></div>
+                            <div id="line1"></div>
+                        </div>
+                    <div id="su">
+                        <h4 id="com">HARISH S S</h4>
+                        <p id="single">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla ullam ea, rem ipsa pariatur adipisci, architecto suscipit quidem animi officiis ab illo quod eaque deserunt voluptas asperiores? Optio, culpa nulla.</p>
+                        <ul id="lis1">
+                            <li id="on2"> 43, Salem, TamilNadu, India</li>
+                            <li id="on2"> +91-9092418002</li>
+                            <li id="on2"> harishss.2k07@gmail.com</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <h3 id="kal">Education</h3>
+                <div class="edu">
+                    <div id="set1">
+                    <div id="point1"></div>
+                    <div id="line1"></div>
+                    <div id="point1"></div>
+                    <div id="line1"></div>
+                    </div>
+                    <div id="su">
+                        <h4 id="com">Higher Secondary</h4>
+                        <h4 id="aca1">2023-2024</h4>
+                        <h4 id="aca2">Holy Cross Matriculation Higher Secondary School,Salem</h4>
+                    <p id="single1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe repudiandae cum reprehenderit aliquam, commodi similique minima nobis cumque excepturi quibusdam sint. Eos ea, illum hic id quos cupiditate ullam labore!</p>
+                        <div class="coleg">
+                            <h4 id="com">Bachelor Of Engineering, Electronics and Communication Engineering</h4>
+                            <h4 id="aca1">2024-2028</h4>
+                            <h4 id="aca2">Bannari Amman Institute Of Technology,Sathyamangalam</h4>
+                            <p id="single1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam debitis at aperiam molestiae voluptatem autem aut laboriosam nesciunt maiores consequatur voluptates pariatur iste accusamus repellendus quasi natus doloremque, iusto non?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="done">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nihil laboriosam eius veritatis officia maiores temporibus possimus et, libero fuga!</p>
+            <p>To get my full and complete resume as a PDF <a href="https://drive.google.com/file/d/1RDFi-SWUvYh1vyztUK53G3-ANaXUFnNf/view?usp=drivesdk">CLICK HERE</a></p>
+        </div>
+        <div class="skills" id="scr4">
+            <h1 id="ul2">Skills:</h1>
+            <p id="ul22"></p>
+            <p class="details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse quo fugit dolorem accusamus voluptatibus nisi sit at ducimus, recusandae tempore eligendi aut corrupti laborum nemo eveniet necessitatibus quidem pariatur veritatis!</p>
+            <div class="bargraph-sec">
+                <div class="bargraph-sec-1">
+                    <h4>HTML</h4>
+                    <div class="html">
+                            <div id="per1"></div>
+                    </div>
+                    <h4>CSS</h4>
+                    <div class="html">
+                            <div id="per2"></div>
+                    </div>
+                    <h4>JAVASCRIPT</h4>
+                    <div class="html">
+                            <div id="per3"></div>
+                    </div>
+                    <h4>GIT</h4>
+                    <div class="html">
+                            <div id="per4"></div>
+                    </div>
+                </div>
+                <div class="bargraph-sec-2">
+                    <h4>JAVA</h4>
+                    <div class="html">
+                            <div id="per5"></div>
+                    </div>
+                    <h4>MY-SQL</h4>
+                    <div class="html">
+                            <div id="per6"></div>
+                    </div>
+                    <h4>JDBC</h4>
+                    <div class="html">
+                            <div id="per7"></div>
+                    </div>
+                    <h4>JAVA SWING</h4>
+                    <div class="html">
+                            <div id="per8"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="contact" id="scr5">
+            <h1 id="ul2">Contact:</h1>
+            <p id="ul22"></p>
+            <div class="alignbox">
+            <div class="con-det">
+                <div class="add" id="part1">
+                    <i class="material-icons" id="part2">location_on</i>
+                    <h4 id="gotto">Address</h4>
+                    <p>41, Chairman Jaganathan Street, Shevapet, Salem, TamilNadu, India</p>
+                </div>
+                <div class="call" id="part1">
+                    <i class="material-icons" id="part2">phone</i>
+                    <h4 id="gotto">Call Us</h4>
+                    <p>+91-9092418002</p>
+                </div>
+                <div class="mail" id="part1">
+                    <i class="material-icons" id="part2">mail</i>
+                    <h4 id="gotto">Mail Us</h4>
+                    <p>harishss.2k07@gmail.com</p>
+                </div>
+            </div>
+            <div class="form">
+                <form>
+                    <table id="table1">
+                        <tr id="gotcha">
+                            <td><label>Your Name:</label></td>
+                            <td><input placeholder="Name" ID="na11"></td>
+                        </tr>
+                        <tr id="gotcha">
+                            <td><label>Your Email:</label></td>
+                            <td><input placeholder="Email" ID="na12"></td>
+                        </tr>
+                        <tr id="gotcha">
+                            <td><label>SUBJECT:</label></td>
+                            <td><input placeholder="Subject" id="na13"></td>
+                        </tr>
+                        <tr id="gotchaa">
+                            <td><label>MESSAGE:</label></td>
+                            <td><textarea placeholder="message" id="na1"></textarea></td>
+                        </tr>
+                    </table>
+                </form>
+                <button id="submit" onclick="submitData()">Send Message</button>
+            </div>
+            </div>
+            <div class="footer">
+                    <p>© 2025 Harish-Port-Folio. All rights reserved.</p>
+                    <p id="last">designed by <a href="https://www.linkedin.com/in/harishsivakumar07/">Harish Sivakumar</a></p>
+            </div>
+        </div>
+        <div class="top" onclick="scrll(event)" onmouseover="point(event)">
+            <i class="material-icons" id="part2">arrow_upward</i>
+        </div>
     </div>
 </div>
 </body>
