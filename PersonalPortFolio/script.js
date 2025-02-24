@@ -109,14 +109,114 @@ function scrll(event)
     }
     else if(op=="Resume" || op=="attachment")
     {
-
+        var ob=document.getElementById("scr3").scrollIntoView(true)
+        ob.scrollIntoView({behavior:"smooth"});
     }
     else if(op=="Skills" || op=="computer")
     {
-
+        var ob=document.getElementById("scr4").scrollIntoView(true)
+        ob.scrollIntoView({behavior:"smooth"});
     }
     else if(op=="Contact" || op=="phone")
     {
-        
+        var ob=document.getElementById("scr5").scrollIntoView(true)
+        ob.scrollIntoView({behavior:"smooth"});
     }
+    else if(op=="arrow_upward")
+    {
+        var ob=document.getElementById("scr1").scrollIntoView(true)
+        ob.scrollIntoView({behavior:"smooth"});
+    }
+}
+function point(event)
+{
+    event.target.style.cursor="pointer";
+}
+
+function sc()
+{
+    console.log("sivakumar");
+    var tst=document.getElementsByClassName("rigth-split");
+}
+
+function show(event)
+{
+    console.log("billie !")
+    var op=event.target.className
+    if(op=="material-icons")
+    {
+        var ob=document.getElementById("left")
+        console.log(ob)
+        ob.classList.add("visible");
+        var ob2=document.getElementById("shr1")
+        ob2.style.zIndex="3";
+        var ob3=document.getElementById("shr")
+        ob3.style.zIndex="0"
+        ob3.style.visibility="hidden";
+        ob2.style.visibility="visible";
+    }
+    else
+    {
+        console.log(op)
+    }
+}
+function hide(event)
+{
+    console.log("eilish");
+    var op=event.target.className
+    if(op=="material-icons")
+    {
+        var ob=document.getElementById("left")
+        var ob2=document.getElementById("shr1")
+        var ob3=document.getElementById("shr")
+        ob.classList.remove("visible");
+
+        ob2.style.zIndex = "-2";
+        ob3.style.zIndex = "3";
+        ob2.style.visibility="hidden";
+        ob3.style.visibility="visible";
+    }
+    else
+    {
+        console.log(op)
+    }
+
+    
+}
+function hov()
+{
+    document.getElementById("shr").style.cursor="pointer"
+    document.getElementById("shr1").style.cursor="pointer"
+}
+
+function submitData()
+{
+    var nam=document.getElementById("na11").value;
+    var mail=document.getElementById("na12").value;
+    var subject=document.getElementById("na13").value;
+    var message=document.getElementById("na1").value;
+
+    const data = {
+      name: nam,
+      email: mail,
+      sub: subject,
+      message: message
+    };
+
+    fetch('http://localhost:8080/api/save', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(responseData => {
+      console.log('Data saved successfully:', responseData.message);
+      alert("message sent !");
+    })
+    .catch(error => {
+      console.error('Error saving data:', error);
+    });
+    
 }
