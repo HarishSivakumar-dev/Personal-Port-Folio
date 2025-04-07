@@ -12,7 +12,7 @@ public class WebConfig implements WebMvcConfigurer {
     {
         // Allow all origins for all endpoints
         registry.addMapping("/api/**")
-        		.allowedOrigins("http://127.0.0.1:5500") // Add your frontend origin
+        		.allowedOrigins("http://127.0.0.1:5500")
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Allow HTTP methods
                 .allowedHeaders("*") // Allow all headers
                 .allowCredentials(true); // Allow credentials (cookies, HTTP authentication)
