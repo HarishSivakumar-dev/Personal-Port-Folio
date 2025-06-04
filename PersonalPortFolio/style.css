@@ -25,7 +25,7 @@ body
 {
     background-color: black;
     color: whitesmoke;
-    height:910px;
+    height:1003px;
     min-width: 300px;
     display: inline-block;
     text-align: center;
@@ -53,7 +53,7 @@ h3
 {
     
     background-color: whitesmoke;
-    height: 910px;
+    height: 1003px;
     width: 100%;
     display:inline-block;
     position: relative;
