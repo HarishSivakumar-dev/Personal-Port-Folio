@@ -29,10 +29,9 @@ body
     min-width: 300px;
     display: inline-block;
     text-align: center;
-    overflow-y: scroll;
+    overflow-y: auto;
     position: relative;
-    overflow-x: scroll;
-    flex-shrink: 0;
+    flex-direction: column;
 }
 .left-split h2
 {
