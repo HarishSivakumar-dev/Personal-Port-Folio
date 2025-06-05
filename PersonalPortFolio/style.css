@@ -25,7 +25,7 @@ body
 {
     background-color: black;
     color: whitesmoke;
-    height:999px;
+    height:auto;
     width: 320px;
     display: inline-block;
     overflow: scroll;
