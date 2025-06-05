@@ -29,7 +29,7 @@ body
     min-width: 300px;
     display: inline-block;
     text-align: center;
-    overflow-y: auto;
+    overflow-y: scroll;
     position: relative;
     flex-direction: column;
 }
