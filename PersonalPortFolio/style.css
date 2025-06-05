@@ -34,6 +34,11 @@ body
     position: relative;
     flex-shrink: 0;
 }
+.placeholder
+{
+    width:320px;
+    height:400px;
+}
 .left-split h2
 {
     margin-top: 150px;
